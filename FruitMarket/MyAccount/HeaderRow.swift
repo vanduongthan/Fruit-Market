@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class HeaderRow: UITableViewCell {
 
 
     @IBOutlet weak var avatarImg: UIImageView!
@@ -17,9 +17,13 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        avatarImg.layer.cornerRadius = avatarImg.bounds.height / 2
+        avatarImg.clipsToBounds = true
+       
+        
     }
-
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

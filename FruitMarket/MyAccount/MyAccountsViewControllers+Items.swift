@@ -7,7 +7,8 @@
 
 import UIKit
 
-enum MyAccountProperties: Int {
+enum MyAccountProperties: Int, CaseIterable {
+    
     case myOrders
     case favourites
     case settings
@@ -16,6 +17,17 @@ enum MyAccountProperties: Int {
     case share
     case help
     case logOut
+    
+    static func itemList() -> [MyAccountProperties] {
+        return [myOrders,
+                favourites,
+                settings,
+                myCart,
+                rateUs,
+                share,
+                help,
+                logOut]
+      }
     
     var icon: UIImage? {
         switch self {

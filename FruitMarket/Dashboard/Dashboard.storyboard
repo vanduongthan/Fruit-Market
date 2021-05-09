@@ -120,54 +120,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyAccountsViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="229" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-GY-N8w">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" restorationIdentifier="MyAccountsViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-GY-N8w">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bPG-oB-s3P"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6va-YC-XNv"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="header" rowHeight="229" id="HiW-Il-daY" customClass="TableViewCell" customModule="FruitMarket" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="header" rowHeight="229" id="HiW-Il-daY" customClass="HeaderRow" customModule="FruitMarket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="49" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HiW-Il-daY" id="8eq-CM-A51">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjz-Aw-WS6">
-                                                    <rect key="frame" x="185.66666666666666" y="162" width="43" height="19.333333333333343"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-Um-dtd">
                                                     <rect key="frame" x="358" y="78" width="36" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="jym-9F-fXO"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-Wp-D5D">
-                                                    <rect key="frame" x="164.66666666666666" y="72" width="85" height="85"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-Wp-D5D">
+                                                    <rect key="frame" x="164.66666666666666" y="67" width="85" height="85"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="UMN-6n-Wkz"/>
-                                                        <constraint firstAttribute="height" constant="85" id="nA7-Il-98W"/>
-                                                        <constraint firstAttribute="width" constant="85" id="qzV-pt-QLp"/>
+                                                        <constraint firstAttribute="width" constant="85" id="95d-VB-EQs"/>
+                                                        <constraint firstAttribute="height" constant="85" id="nYz-yE-aK7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-VR-oFj">
-                                                    <rect key="frame" x="0.0" y="181" width="414" height="14.333333333333343"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-VR-oFj">
+                                                    <rect key="frame" x="0.0" y="188" width="414" height="14.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjz-Aw-WS6">
+                                                    <rect key="frame" x="-0.64167971542019586" y="162" width="414.00000000000006" height="19.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.41176470588235292" green="0.62745098039215685" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="mjz-Aw-WS6" firstAttribute="width" secondItem="C8N-VR-oFj" secondAttribute="width" id="0Pj-6h-Rmi"/>
+                                                <constraint firstItem="3B1-Wp-D5D" firstAttribute="top" secondItem="8eq-CM-A51" secondAttribute="top" constant="67" id="AHe-tE-1dT"/>
                                                 <constraint firstItem="C8N-VR-oFj" firstAttribute="leading" secondItem="8eq-CM-A51" secondAttribute="leading" id="CTJ-12-V5i"/>
                                                 <constraint firstAttribute="trailing" secondItem="C8N-VR-oFj" secondAttribute="trailing" id="K62-Tk-0F2"/>
                                                 <constraint firstItem="P3F-Um-dtd" firstAttribute="top" secondItem="8eq-CM-A51" secondAttribute="topMargin" constant="67" id="MpE-Lx-fre"/>
-                                                <constraint firstItem="3B1-Wp-D5D" firstAttribute="centerY" secondItem="8eq-CM-A51" secondAttribute="centerY" id="YRC-Rh-OM7"/>
-                                                <constraint firstItem="3B1-Wp-D5D" firstAttribute="centerX" secondItem="8eq-CM-A51" secondAttribute="centerX" id="b1G-qH-0gl"/>
-                                                <constraint firstItem="mjz-Aw-WS6" firstAttribute="centerX" secondItem="8eq-CM-A51" secondAttribute="centerX" id="fa5-9e-OKS"/>
-                                                <constraint firstItem="mjz-Aw-WS6" firstAttribute="top" secondItem="8eq-CM-A51" secondAttribute="top" constant="162" id="i9L-fE-7gh"/>
-                                                <constraint firstItem="C8N-VR-oFj" firstAttribute="top" secondItem="3B1-Wp-D5D" secondAttribute="bottom" constant="24" id="meR-bC-9R0"/>
+                                                <constraint firstItem="3B1-Wp-D5D" firstAttribute="centerX" secondItem="8eq-CM-A51" secondAttribute="centerX" id="gAI-ZR-Pmz"/>
                                                 <constraint firstItem="P3F-Um-dtd" firstAttribute="trailing" secondItem="8eq-CM-A51" secondAttribute="trailingMargin" id="vQk-uN-aSq"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -177,6 +176,43 @@
                                             <outlet property="edit" destination="P3F-Um-dtd" id="4ds-La-YrU"/>
                                             <outlet property="email" destination="C8N-VR-oFj" id="SpC-n9-dyf"/>
                                             <outlet property="name" destination="mjz-Aw-WS6" id="41a-Qj-Jdh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingItem" rowHeight="60" id="4X5-x5-QWy" customClass="SettingItem" customModule="FruitMarket" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="278" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4X5-x5-QWy" id="ROT-K0-EYu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyB-DT-oRH">
+                                                    <rect key="frame" x="46" y="18" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="Tzj-2b-qgp"/>
+                                                        <constraint firstAttribute="height" constant="24" id="VXb-fB-bB3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kt-1k-Tf0">
+                                                    <rect key="frame" x="86" y="19.666666666666668" width="301" height="21.000000000000004"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XyB-DT-oRH" firstAttribute="leading" secondItem="ROT-K0-EYu" secondAttribute="leadingMargin" constant="26" id="3OZ-IC-O66"/>
+                                                <constraint firstItem="4kt-1k-Tf0" firstAttribute="leading" secondItem="XyB-DT-oRH" secondAttribute="trailing" constant="16" id="OOg-ig-euy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="4kt-1k-Tf0" firstAttribute="width" secondItem="4X5-x5-QWy" secondAttribute="width" multiplier="0.727053" id="22a-eH-jfA"/>
+                                            <constraint firstItem="XyB-DT-oRH" firstAttribute="centerY" secondItem="4X5-x5-QWy" secondAttribute="centerY" id="626-wX-klX"/>
+                                            <constraint firstItem="4kt-1k-Tf0" firstAttribute="centerY" secondItem="4X5-x5-QWy" secondAttribute="centerY" id="idw-1v-9w2"/>
+                                            <constraint firstItem="XyB-DT-oRH" firstAttribute="width" secondItem="4X5-x5-QWy" secondAttribute="width" multiplier="0.057971" id="y0x-w4-AVe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemIcon" destination="XyB-DT-oRH" id="veu-7m-f3Q"/>
+                                            <outlet property="itemName" destination="4kt-1k-Tf0" id="xin-jX-WAS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -208,6 +244,7 @@
         <image name="Favourite" width="23" height="21"/>
         <image name="Home" width="24" height="24"/>
         <image name="Shopping cart" width="26" height="25"/>
+        <image name="avatar" width="660" height="878"/>
         <image name="edit" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
