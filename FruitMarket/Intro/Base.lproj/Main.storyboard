@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lIG-en-2yB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FruitMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9a4-rY-8tw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="m80-x6-nU3" kind="embed" identifier="embedPageVIew" id="JxM-JX-nEx"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrH-QC-ikj">
+                                <rect key="frame" x="114" y="715" width="186" height="36"/>
+                                <color key="backgroundColor" red="0.41457104680000001" green="0.63140177730000002" blue="0.22726923230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNS-MM-2CO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXU-Ao-gJF">
+                                <rect key="frame" x="347" y="154" width="38" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" name="skip"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDashboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1u-hz-FH0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9a4-rY-8tw" secondAttribute="bottom" id="4zJ-gq-i8A"/>
+                            <constraint firstItem="hrH-QC-ikj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="5hx-Cb-fIl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PXU-Ao-gJF" secondAttribute="trailing" constant="29" id="6Z9-Hh-8UI"/>
+                            <constraint firstItem="9a4-rY-8tw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B9c-iW-sdF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hrH-QC-ikj" secondAttribute="trailing" constant="114" id="DQJ-2p-34s"/>
+                            <constraint firstItem="9a4-rY-8tw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H8a-aw-MeV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9a4-rY-8tw" secondAttribute="trailing" id="MfC-rj-nAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hrH-QC-ikj" secondAttribute="bottom" constant="111" id="T50-lC-pka"/>
+                            <constraint firstItem="PXU-Ao-gJF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="ZDX-La-8gR"/>
+                            <constraint firstItem="PXU-Ao-gJF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="ySo-hj-7gF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bB2-2q-Yzi"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nextButton" destination="hrH-QC-ikj" id="D0m-F7-8nA"/>
+                        <outlet property="skipButton" destination="PXU-Ao-gJF" id="1Zi-8n-vGE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="88.392857142857139"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="JGS-jc-2ej">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m80-x6-nU3" customClass="OnboardingPageViewController" customModule="FruitMarket" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEK-iI-MdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="87.723214285714278"/>
+        </scene>
+        <!--Onboarding Child View Controller-->
+        <scene sceneID="32P-zJ-vsE">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6eC-ga-R5m" customClass="OnboardingChildViewController" customModule="FruitMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u2H-rm-FbN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Q86-GX-73s">
+                                <rect key="frame" x="32" y="275" width="350" height="346"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardingStep1" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-z8-KKS">
+                                        <rect key="frame" x="38.5" y="0.0" width="273" height="273"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HmX-z8-KKS" secondAttribute="height" id="qwY-O2-Iq7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E Shopping" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iee-Ll-tGZ">
+                                        <rect key="frame" x="131.5" y="289" width="87" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="content_text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore top organic fruits &amp; grab them" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCv-0G-NAK">
+                                        <rect key="frame" x="30.5" y="325.5" width="289.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Sub_content"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgK-N3-8aj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q86-GX-73s" firstAttribute="leading" secondItem="fgK-N3-8aj" secondAttribute="leading" constant="32" id="QBz-Ak-wbY"/>
+                            <constraint firstItem="Q86-GX-73s" firstAttribute="centerX" secondItem="u2H-rm-FbN" secondAttribute="centerX" id="RMj-00-lhY"/>
+                            <constraint firstItem="Q86-GX-73s" firstAttribute="centerY" secondItem="u2H-rm-FbN" secondAttribute="centerY" id="yS7-BN-73C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="HmX-z8-KKS" id="win-ks-2j7"/>
+                        <outlet property="subtitleContentLabel" destination="tCv-0G-NAK" id="g82-SF-D76"/>
+                        <outlet property="titleContentLabel" destination="iee-Ll-tGZ" id="gfr-HW-pki"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJO-w3-pBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2542.0289855072465" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WwE-2s-BZr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lIG-en-2yB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g3M-Qa-zt4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jir-qk-Tr1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6W-P4-2yy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboardingStep1" width="273" height="211"/>
+        <namedColor name="Sub_content">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="content_text">
+            <color red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="skip">
+            <color red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

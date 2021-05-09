@@ -1,0 +1,19 @@
+/* 
+  OnboardingChildViewController.strings
+  FruitMarket
+
+  Created by Van Duong on 05/05/2021.
+  
+*/
+"skip" = "Skip";
+"next" = "Next";
+"getStarted" = "Get Started";
+
+"firstScreenContent" = "E Shopping";
+"secondScreenContent" = "Delivery on the way";
+"thirdScreenContent" = " Delivery Arived";
+
+"firstScreenDescription" = "Explore  top organic fruits & grab them";
+"secondScreenDescription" = "Get your order by speed delivery";
+"thirdScreenDescription" = "Order is arrived at your Place";
+

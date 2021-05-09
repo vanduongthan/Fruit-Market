@@ -1,0 +1,16 @@
+/* 
+  MyAccountsViewControllers.strings
+  FruitMarket
+
+  Created by Van Duong on 08/05/2021.
+  
+*/
+"myOrders" = "My Orders";
+"farourites" = "Favourites";
+"settings" = "Settings";
+"myCart" = "My cart";
+"rateUs" = "Rate Us";
+"share" = "Refer a Friend";
+"help" = "Help";
+"logOut" = "Log Out";
+
