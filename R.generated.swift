@@ -147,7 +147,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 5 colors.
+  /// This `R.color` struct is generated, and contains static references to 6 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -157,6 +157,8 @@ struct R: Rswift.Validatable {
     static let sub_content = Rswift.ColorResource(bundle: R.hostingBundle, name: "Sub_content")
     /// Color `content_text`.
     static let content_text = Rswift.ColorResource(bundle: R.hostingBundle, name: "content_text")
+    /// Color `green`.
+    static let green = Rswift.ColorResource(bundle: R.hostingBundle, name: "green")
     /// Color `skip`.
     static let skip = Rswift.ColorResource(bundle: R.hostingBundle, name: "skip")
 
@@ -193,6 +195,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func content_text(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.content_text, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.green, compatibleWith: traitCollection)
     }
     #endif
 
@@ -238,6 +249,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
+    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func green(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.green.name)
+    }
+    #endif
+
+    #if os(watchOS)
     /// `UIColor(named: "skip", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func skip(_: Void = ()) -> UIKit.UIColor? {
@@ -248,7 +267,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 19 images.
+  /// This `R.image` struct is generated, and contains static references to 20 images.
   struct image {
     /// Image `Account`.
     static let account = Rswift.ImageResource(bundle: R.hostingBundle, name: "Account")
@@ -264,6 +283,8 @@ struct R: Rswift.Validatable {
     static let cart = Rswift.ImageResource(bundle: R.hostingBundle, name: "cart")
     /// Image `edit`.
     static let edit = Rswift.ImageResource(bundle: R.hostingBundle, name: "edit")
+    /// Image `favourites`.
+    static let favourites = Rswift.ImageResource(bundle: R.hostingBundle, name: "favourites")
     /// Image `help`.
     static let help = Rswift.ImageResource(bundle: R.hostingBundle, name: "help")
     /// Image `logOut`.
@@ -335,6 +356,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "edit", bundle: ..., traitCollection: ...)`
     static func edit(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.edit, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "favourites", bundle: ..., traitCollection: ...)`
+    static func favourites(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.favourites, compatibleWith: traitCollection)
     }
     #endif
 
@@ -456,10 +484,46 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  struct nib {
+    /// Nib `MyAccountHeaderTableView`.
+    static let myAccountHeaderTableView = _R.nib._MyAccountHeaderTableView()
+    /// Nib `MyAccountTableViewCell`.
+    static let myAccountTableViewCell = _R.nib._MyAccountTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MyAccountHeaderTableView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.myAccountHeaderTableView) instead")
+    static func myAccountHeaderTableView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.myAccountHeaderTableView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MyAccountTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.myAccountTableViewCell) instead")
+    static func myAccountTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.myAccountTableViewCell)
+    }
+    #endif
+
+    static func myAccountHeaderTableView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MyAccountHeaderTableView? {
+      return R.nib.myAccountHeaderTableView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MyAccountHeaderTableView
+    }
+
+    static func myAccountTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MyAccountTableViewCell? {
+      return R.nib.myAccountTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MyAccountTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `header`.
-    static let header: Rswift.ReuseIdentifier<TableViewCell> = Rswift.ReuseIdentifier(identifier: "header")
+    /// Reuse identifier `MyAccountHeaderTableView`.
+    static let myAccountHeaderTableView: Rswift.ReuseIdentifier<MyAccountHeaderTableView> = Rswift.ReuseIdentifier(identifier: "MyAccountHeaderTableView")
+    /// Reuse identifier `MyAccountTableViewCell`.
+    static let myAccountTableViewCell: Rswift.ReuseIdentifier<MyAccountTableViewCell> = Rswift.ReuseIdentifier(identifier: "MyAccountTableViewCell")
 
     fileprivate init() {}
   }
@@ -793,6 +857,40 @@ struct _R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _MyAccountHeaderTableView: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = MyAccountHeaderTableView
+
+      let bundle = R.hostingBundle
+      let identifier = "MyAccountHeaderTableView"
+      let name = "MyAccountHeaderTableView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MyAccountHeaderTableView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MyAccountHeaderTableView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _MyAccountTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = MyAccountTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "MyAccountTableViewCell"
+      let name = "MyAccountTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MyAccountTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MyAccountTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
+
+  #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
@@ -828,7 +926,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "Favourite", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Favourite' is used in storyboard 'Dashboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "Home", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Home' is used in storyboard 'Dashboard', but couldn't be loaded.") }
         if UIKit.UIImage(named: "Shopping cart", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Shopping cart' is used in storyboard 'Dashboard', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "edit", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'edit' is used in storyboard 'Dashboard', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.dashboard().dashboardViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'dashboardViewController' could not be loaded from storyboard 'Dashboard' as 'DashboardViewController'.") }

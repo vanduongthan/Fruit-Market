@@ -34,7 +34,7 @@ enum MyAccountProperties: Int, CaseIterable {
         case .myOrders:
             return R.image.myOrders()
         case .favourites:
-            return R.image.favourite()
+            return R.image.favourites()
         case .settings:
             return R.image.setting()
         case .myCart:

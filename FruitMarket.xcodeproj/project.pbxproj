@@ -20,10 +20,13 @@
 		8E6046B32642834400586D9A /* OnboardingChildViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E6046B52642834400586D9A /* OnboardingChildViewController.strings */; };
 		8E6046B92642863500586D9A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6046B82642863500586D9A /* R.generated.swift */; };
 		8E6046BD26428A1000586D9A /* OnboardingViewController+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6046BC26428A1000586D9A /* OnboardingViewController+Define.swift */; };
+		8E6E767C26590BB2007FBDEB /* MyAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E767A26590BB2007FBDEB /* MyAccountTableViewCell.swift */; };
+		8E6E767D26590BB2007FBDEB /* MyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E767B26590BB2007FBDEB /* MyAccountTableViewCell.xib */; };
+		8E6E768026591651007FBDEB /* MyAccountHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E767E26591651007FBDEB /* MyAccountHeaderTableView.swift */; };
+		8E6E768126591651007FBDEB /* MyAccountHeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E767F26591651007FBDEB /* MyAccountHeaderTableView.xib */; };
 		8EAC2CD02644E0DA00272AFA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC2CCF2644E0DA00272AFA /* DashboardViewController.swift */; };
 		8EAC2CD22644E0F200272AFA /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC2CD12644E0F200272AFA /* Dashboard.storyboard */; };
 		8EAC2CD42644F95400272AFA /* DashboardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC2CD32644F95400272AFA /* DashboardIcon.xcassets */; };
-		8EAC2CD72646E85700272AFA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC2CD62646E85700272AFA /* TableViewCell.swift */; };
 		8EAC2CD92646EA7600272AFA /* MyAccountIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC2CD82646EA7600272AFA /* MyAccountIcons.xcassets */; };
 		8EAC2CDB2646ED9F00272AFA /* MyAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC2CDA2646ED9F00272AFA /* MyAccountsViewController.swift */; };
 		8EAC2CDD2646F13D00272AFA /* MyAccountsViewControllers+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC2CDC2646F13D00272AFA /* MyAccountsViewControllers+Items.swift */; };
@@ -48,10 +51,13 @@
 		8E6046B62642836100586D9A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/OnboardingChildViewController.strings; sourceTree = "<group>"; };
 		8E6046B82642863500586D9A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8E6046BC26428A1000586D9A /* OnboardingViewController+Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingViewController+Define.swift"; sourceTree = "<group>"; };
+		8E6E767A26590BB2007FBDEB /* MyAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewCell.swift; sourceTree = "<group>"; };
+		8E6E767B26590BB2007FBDEB /* MyAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccountTableViewCell.xib; sourceTree = "<group>"; };
+		8E6E767E26591651007FBDEB /* MyAccountHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountHeaderTableView.swift; sourceTree = "<group>"; };
+		8E6E767F26591651007FBDEB /* MyAccountHeaderTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyAccountHeaderTableView.xib; sourceTree = "<group>"; };
 		8EAC2CCF2644E0DA00272AFA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8EAC2CD12644E0F200272AFA /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		8EAC2CD32644F95400272AFA /* DashboardIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DashboardIcon.xcassets; sourceTree = "<group>"; };
-		8EAC2CD62646E85700272AFA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8EAC2CD82646EA7600272AFA /* MyAccountIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyAccountIcons.xcassets; sourceTree = "<group>"; };
 		8EAC2CDA2646ED9F00272AFA /* MyAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsViewController.swift; sourceTree = "<group>"; };
 		8EAC2CDC2646F13D00272AFA /* MyAccountsViewControllers+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAccountsViewControllers+Items.swift"; sourceTree = "<group>"; };
@@ -140,11 +146,14 @@
 		8EAC2CD52646E82900272AFA /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
-				8EAC2CD62646E85700272AFA /* TableViewCell.swift */,
 				8EAC2CD82646EA7600272AFA /* MyAccountIcons.xcassets */,
 				8EAC2CDA2646ED9F00272AFA /* MyAccountsViewController.swift */,
 				8EAC2CDC2646F13D00272AFA /* MyAccountsViewControllers+Items.swift */,
 				8EAC2CDE2646F57D00272AFA /* MyAccountsViewControllers.strings */,
+				8E6E767A26590BB2007FBDEB /* MyAccountTableViewCell.swift */,
+				8E6E767B26590BB2007FBDEB /* MyAccountTableViewCell.xib */,
+				8E6E767E26591651007FBDEB /* MyAccountHeaderTableView.swift */,
+				8E6E767F26591651007FBDEB /* MyAccountHeaderTableView.xib */,
 			);
 			path = MyAccount;
 			sourceTree = "<group>";
@@ -222,10 +231,12 @@
 				8EAC2CD42644F95400272AFA /* DashboardIcon.xcassets in Resources */,
 				8EAC2CDF2646F57D00272AFA /* MyAccountsViewControllers.strings in Resources */,
 				8E0EB90E263A9CD100679E31 /* LaunchScreen.storyboard in Resources */,
+				8E6E768126591651007FBDEB /* MyAccountHeaderTableView.xib in Resources */,
 				8EAC2CD92646EA7600272AFA /* MyAccountIcons.xcassets in Resources */,
 				8EAC2CD22644E0F200272AFA /* Dashboard.storyboard in Resources */,
 				8E0EB90B263A9CD100679E31 /* Assets.xcassets in Resources */,
 				8E0EB909263A9CCE00679E31 /* Main.storyboard in Resources */,
+				8E6E767D26590BB2007FBDEB /* MyAccountTableViewCell.xib in Resources */,
 				8E6046B32642834400586D9A /* OnboardingChildViewController.strings in Resources */,
 				8E6046AC26425CD800586D9A /* OnboardingAssets.xcassets in Resources */,
 			);
@@ -300,14 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6E768026591651007FBDEB /* MyAccountHeaderTableView.swift in Sources */,
 				8E6046AE26427B2700586D9A /* OnboardingChildViewController.swift in Sources */,
 				8EAC2CDD2646F13D00272AFA /* MyAccountsViewControllers+Items.swift in Sources */,
 				8EAC2CD02644E0DA00272AFA /* DashboardViewController.swift in Sources */,
 				8E6046B92642863500586D9A /* R.generated.swift in Sources */,
 				8E0EB906263A9CCE00679E31 /* ViewController.swift in Sources */,
 				8EAC2CDB2646ED9F00272AFA /* MyAccountsViewController.swift in Sources */,
-				8EAC2CD72646E85700272AFA /* TableViewCell.swift in Sources */,
 				8E6046AA2642595300586D9A /* OnboardingPageViewController.swift in Sources */,
+				8E6E767C26590BB2007FBDEB /* MyAccountTableViewCell.swift in Sources */,
 				8E0EB902263A9CCE00679E31 /* AppDelegate.swift in Sources */,
 				8E0EB904263A9CCE00679E31 /* SceneDelegate.swift in Sources */,
 				8E6046BD26428A1000586D9A /* OnboardingViewController+Define.swift in Sources */,
